@@ -24,7 +24,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul th:fragment="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul th:fragment="sidebar" class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/teste">
@@ -36,41 +36,40 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/index">
+                <a class="nav-link" href="/">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
             <!-- Heading -->
             <div class="sidebar-heading">
-                Funcionalidades
+                Bolão
             </div>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Perfil -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Bolão</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Opções</h6>
-                        <a class="collapse-item" href="/selecoes">Seleções</a>
-                        <a class="collapse-item" href="/jogos">Jogos</a>
-                        <a class="collapse-item" href="/rodadas">Rodadas</a>
-                        <a class="collapse-item" href="/resultados">Resultados</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="/selecoes">
+                    <i class="fas fa-fw fa-futbol"></i>
+                    <span>Seleções</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                User
+            </div>
 
+            <!-- Nav Item - Perfil -->
+            <li class="nav-item">
+                <a class="nav-link" href="/perfil">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Perfil</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Admin

@@ -23,9 +23,9 @@ public class AuthController {
         this.isAuthenticated = true;
     }
 
-    @GetMapping(value = "/teste")
+    @GetMapping(value = "/perfil")
     public String teste(Model model){
-        model.addAttribute("page", "dashboard");
+        model.addAttribute("page", "perfil");
         return "index";
     }
 

@@ -24,6 +24,9 @@
                 <div th:if="${page == 'selecoes'}">
                     <div th:replace="~{fragments/selecoes::content}"></div>
                 </div>
+                <div th:if="${page == 'perfil'}">
+                    <div th:replace="~{fragments/perfil::content}"></div>
+                </div>
                 <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->
