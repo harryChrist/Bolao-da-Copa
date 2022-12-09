@@ -3,64 +3,67 @@
 
 <head th:replace="~{layout::head}"></head>
 
-<body class="bg-gradient-primary">
+<style>
+    background {
+        background-color: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+</style>
 
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+<body style="background-color: #eee;">
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
                             <div class="col-lg-6">
-                                <div class="p-5">
+                                <div class="card-body p-md-5 mx-md-4">
+
                                     <div class="text-center">
-                                        <img src="img/logoUVV.png" alt="logo" style="height: 9vh">
-                                        <h1 class="h4 text-gray-900 mb-4">Bolão da Copa 2022</h1>
+                                        <img src="img/logoUVV.png" style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">Bolão da Copa</h4>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Entre com seu e-mail">
+
+                                    <form>
+                                        <p>Porfavor faça login! ;-;</p>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example11">Usuário</label>
+                                            <input type="email" id="form2Example11" class="form-control"
+                                                placeholder="Phone number or email address" />
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Senha">
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Senha</label>
+                                            <input type="password" id="form2Example22" class="form-control" />
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Lembrar-me</label>
-                                            </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <a href="/logado" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                type="button">Entrar</a>
+                                            <a class="text-muted" href="#!">Forgot password?</a>
                                         </div>
-                                        <a href="/" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+
+                                        <div class="d-flex row align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Não tem nenhuma conta?</p>
+                                            <a type="button" href="/register" class="btn btn-outline-danger m-2">Criar Conta</a>
+                                        </div>
+
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="/forgot-password">Esqueceu sua senha?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="/register">Cadastre-se!</a>
-                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex bg-login-image">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4">2022</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-    </div>
+    </section>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

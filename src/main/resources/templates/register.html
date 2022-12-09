@@ -1,57 +1,97 @@
 <head th:replace="~{layout::head}"></head>
 
-<body class="bg-gradient-primary">
+<body style="background-color: #eee;">
 
-    <div class="container">
-
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <img src="img/logoUVV.png" alt="logo" style="height: 9vh">
-                                <h1 class="h4 text-gray-900 mb-4">Crie sua conta!</h1>
-                            </div>
-                            <form class="user" action="#" th:object="${userModel}" th:action="@{/adduser}" method="post">
-                                <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="text" th:field="*{nome}" class="form-control form-control-user" id="nome"
-                                            placeholder="Nome">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" th:field="*{email}" class="form-control form-control-user" id="email"
-                                        placeholder="Email">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" th:field="*{password}" class="form-control form-control-user"
-                                            id="senha" placeholder="Senha">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="repitaSenha" placeholder="Repita a senha">
-                                    </div>
-                                </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Registrar">
-                            </form>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="/forgot-password">Esqueceu sua senha?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="/login">Já possui uma conta? Faça login!</a>
-                            </div>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulário de Registro</h3>
+                  <form>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstName">Primeiro Nome</label>
                         </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Segundo Nome</label>
+                        </div>
+      
+                      </div>
                     </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 d-flex align-items-center">
+      
+                        <div class="form-outline datepicker w-100">
+                          <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                          <label for="birthdayDate" class="form-label">Aniversário</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <h6 class="mb-2 pb-1">Gênero: </h6>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Mulher</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Homem</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Outros</label>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                          <label class="form-label" for="emailAddress">Email</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                        </div>
+      
+                      </div>
+                    </div>
+                    <div class="d-flex row align-items-center justify-content-center pb-4">
+                        <a type="button" href="/" class="btn btn-outline-danger m-2">Registrar</a>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
-    </div>
+      </section>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

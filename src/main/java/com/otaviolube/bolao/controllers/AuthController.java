@@ -20,13 +20,31 @@ public class AuthController {
     UserRepository userRepository;
 
     public AuthController() {
-        this.isAuthenticated = true;
+        this.isAuthenticated = false;
+    }
+
+    public void setLogin() {
+        this.isAuthenticated = !this.isAuthenticated;
     }
 
     @GetMapping(value = "/perfil")
-    public String teste(Model model){
+    public String perfil(Model model){
         model.addAttribute("page", "perfil");
         return "index";
+    }
+
+    @GetMapping(value = "/logado")
+    public String logado(Model model){
+        model.addAttribute("page", "perfil");
+        this.isAuthenticated = true;
+        return "index";
+    }
+
+    @GetMapping(value = "/logout")
+    public String logout(Model model){
+        model.addAttribute("page", "perfil");
+        this.isAuthenticated = false;
+        return "login";
     }
 
     @GetMapping(value = "/")
@@ -53,7 +71,7 @@ public class AuthController {
         return "redirect:/login";
     }
 
-    @GetMapping(value = "/login")
+    @GetMapping(value = "/index")
     public String login(){
         if(this.isAuthenticated){
             return "index";
