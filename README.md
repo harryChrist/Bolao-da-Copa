@@ -10,5 +10,3 @@ Este projeto corresponde ao desenvolvimento do Bolão da Copa como forma de aval
 ### Tecnologias Utilizadas
 
 - Springboot
-
-### Guia de Desenvolvimento
